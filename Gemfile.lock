@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    smarter_csv (1.0.19)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  smarter_csv
+
+BUNDLED WITH
+   1.10.5
