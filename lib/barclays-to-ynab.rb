@@ -6,7 +6,9 @@ module BarclaysToYnab
   class Converter
     def convert(path)
       new_path = path + '.ynab.csv'
-      transactions = SmarterCSV.process(path)
+      file = File.open(path, "r:ISO-8859-1")
+      transactions = SmarterCSV.process(file)
+      file.close
       headers = %w(Date Payee Memo Inflow Outflow Category)
 
       File.open(new_path, 'w') do |f|
